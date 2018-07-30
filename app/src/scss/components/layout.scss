@@ -1,0 +1,116 @@
+html,
+body {
+  height : 100%;
+}
+.header {
+  overflow : hidden;
+  height : 80px;
+  line-height : 100px;
+  background : url('../images/headerBg.png') no-repeat left top;
+  background-size : 100% 100%;
+  .logo {
+    float : left;
+    margin-left : 45px;
+  }
+  .header-title {
+    float : left;
+    height : 80px;
+    margin : 0;
+    padding : 0;
+    font-size : 24px;
+    line-height : 100px;
+    color : #fff;
+  }
+}
+.head-nav {
+  overflow : hidden;
+  height : 24px;
+  line-height : 24px;
+  color : #fff;
+  background : #333;
+  .nav-list-item {
+    display : inline-block;
+    width : 130px;
+     > a {
+      display : block;
+      font-size : 12px;
+      cursor : pointer;
+      text-align : center;
+      text-decoration : none;
+      color : #fff;
+      background : url('../images/navbg.png') no-repeat left top;
+      &:hover {
+        background : url('../images/navhover.png') no-repeat left top;
+      }
+    }
+    &.index-active > a,
+    &.alarm-active > a {
+      background : url('../images/navhover.png') no-repeat left top;
+    }
+  }
+}
+
+.main {
+  position : relative;
+  width : 100%;
+  .main-nav-box {
+    position : absolute;
+    top : 0;
+    left : 0;
+    width : 300px;
+    height : 100%;
+    // background : #162e75;
+    .nav-list {
+      .list-group {
+        margin-bottom : 0;
+      }
+      .nav-list-item {
+        a {
+          display : block;
+          height : 38px;
+          font-size : 15px;
+          line-height : 38px;
+          text-align : center;
+          color : #fff;
+          background : url('../images/main-nav.png') no-repeat left top;
+          background-size : 100%;
+          &:hover {
+            text-decoration : none;
+            background : url('../images/main-navhover.png') no-repeat left top;
+            background-size : 100%;
+          }
+        }
+      }
+      .active1,
+      .active2,
+      .active3,
+      .active4,
+      .active5,
+      .active6 {
+        a {
+          background : url('../images/main-navhover.png') no-repeat left top;
+          background-size : 100%;
+        }
+      }
+    }
+  }
+  .index-left-nav {
+    .list-group2,
+    .list-group3 {
+      display : none;
+    }
+  }
+  .main-content-box {
+    margin-left : 300px;
+    padding : 20px 10px 0 10px;
+    .main-content {
+      min-height : 600px;
+      border : 1px solid #333;
+      background : #f7f8f8;
+      .back-btn {
+        width : 150px;
+        margin-right : 10px;
+      }
+    }
+  }
+}

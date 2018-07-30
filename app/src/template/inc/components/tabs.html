@@ -1,0 +1,37 @@
+<div class="@@t-class" role="tabpanel">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+      <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">@@t-name1</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="tab1">
+      <!-- 历史数据 -->
+      @@if (name === "hn-box") {
+      <!-- 搜索组件 -->
+      @@include('../components/search.html',{"search-btn-id":"search-histori-btn","search-btn-input-id":"search-histori-input"})
+      <!-- 历史信息 -->
+      @@include('../components/historiNoteTable.html', {"className":"hn-box"})
+      <!-- 分页组件 -->
+      @@include('../components/pageation.html', {"pageClass":"hn-page-box", "idName":"n"})
+      <!-- end if -->
+      }
+
+
+      <!-- 报警历史数据 -->
+      @@if (name === "an-box") {
+      <!-- 搜索组件 -->
+      @@include('../components/search.html',{"search-btn-id":"search-alarm-btn","search-btn-input-id":"search-alarm-input"})
+      <!-- 历史信息 -->
+      @@include('../components/alarmNoteTable.html', {"className":"an-box"})
+      <!-- 分页组件 -->
+      @@include('../components/pageation.html', {"pageClass":"an-page-box", "idName":"a"})
+      <!-- end if -->
+      }
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- 公用 SEO 文件 -->
+  @@include('./inc/global/head.html', {"title":"视频诊断系统"})
+  <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+
+  <div class="jumbotron login-box">
+    <div class="container">
+      <h1 class="login-title text-center">视频诊断系统</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xs-offset-4">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <form action="" role="form" class="">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <span class="input-group-addon">用户名：</span>
+                      <input type="text" class="form-control" id="user-name" placeholder="请输入用户名" aria-describedby="basic-addon1">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <span class="input-group-addon">密&nbsp;&nbsp;&nbsp;码：</span>
+                      <input type="password" class="form-control" id="user-pass" placeholder="请输入密码" aria-describedby="basic-addon1">
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-primary pull-right" id="login_btn">登 陆</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xs-offset-4  login-alert-box">
+            <div class="alert alert-danger login-alert">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              <span id="alert-span"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/jquery1.9.1/jquery.min.js"></script>
+  <script src="./js/axios/axios.js"></script>
+  <script src="./js/api.js"></script>
+  <script src="./js/login.js"></script>
+</body>
+
+</html>

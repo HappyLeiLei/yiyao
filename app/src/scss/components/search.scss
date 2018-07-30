@@ -1,0 +1,24 @@
+.search-box {
+  padding : 25px 30px;
+}
+
+.data-control-label {
+  height : 30px;
+  line-height : 30px;
+  text-align : right;
+}
+
+.page-box {
+  padding : 0 35px;
+  .pagination > li {
+    display : inline-block;
+  }
+  .span-input {
+    padding : 4px 12px;
+  }
+  #go-to-pageN {
+    width : 60px;
+    height : 21px;
+    text-align : center;
+  }
+}

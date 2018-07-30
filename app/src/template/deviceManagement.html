@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- 公用 SEO 文件 -->
+  @@include('./inc/global/head.html', {"title":"诊断系统——设备管理"})
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+  <!-- 公用 header 文件 -->
+  @@include('./inc/public/header.html')
+  <!-- 公用导航 nav -->
+  <div class="main index-main">
+    <!-- 首页左侧导航 -->
+    @@include('./inc/public/leftNav.html', {"class":"main-nav-box","classa1":"active1"})
+    <div class="main-content-box">
+      <div class="main-content">
+        @@include('./inc/components/deviceManagement.html')
+      </div>
+    </div>
+  </div>
+
+  <!-- 公用js库文件 -->
+  @@include('./inc/global/jsfooter.html')
+  <script src="http://api.map.baidu.com/api?v=2.0&ak=sUdSmbsNs3SD23Gk4dYZXIusmRtYC3w7"></script>
+</body>
+
+</html>

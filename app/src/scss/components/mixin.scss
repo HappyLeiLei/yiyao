@@ -1,0 +1,41 @@
+body {
+  font : 12px/1.5 Microsoft YaHei, tahoma, arial, Hiragino Sans GB, \\5b8b\4f53,
+  sans-serif;
+}
+a:hover {
+  transition : .3s all;
+}
+
+ul {
+  margin : 0;
+  padding : 0;
+}
+li {
+  list-style : none;
+}
+
+.form-group {
+  margin-bottom : 25px;
+}
+
+// 重置tab样式
+.nav-tabs {
+  background : #ddd;
+}
+.nav-tabs > li > a {
+  margin-right : 0;
+  padding : 5px 14px;
+  border-radius : 0;
+}
+
+// 重置表格样式
+.table > thead > tr > th,
+.table > tbody > tr > td {
+  text-align : center;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color : #f2f2f2;
+}
+.table-hover > tbody > tr:hover {
+  background-color : rgba(126, 167, 247, .753);
+}

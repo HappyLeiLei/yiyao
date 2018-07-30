@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>统计台</title>
+  <link rel="stylesheet" href="./css/bootstrap3.x/bootstrap.css">
+  <link rel="stylesheet" href="./css/statisticalHome.css">
+</head>
+
+<body>
+
+  <div class="bd-container container">
+    <div class="row">
+      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 bd-col-2 bd-col-l">
+        <div class="bd-boxl">
+          <div class="border-box border-box-top"></div>
+          <div class="border-box border-box-bottom"></div>
+          <div class="bd-system">
+            <h1 class="system-title">宝坻区河长管理体系</h1>
+            <span class="q-live live-span">区级河长
+              <span id="q-live">-</span>
+            </span>
+            <span class="z-live live-span">镇级河长
+              <span id="z-live">-</span>
+            </span>
+            <span class="c-live live-span">村级河长
+              <span id="c-live">-</span>
+            </span>
+          </div>
+          <div class="bd-feedback">
+            <h1 class="feedback-title">
+              <span>河道巡查任务反馈</span>
+            </h1>
+            <ul>
+              <li>总任务数：
+                <span id="fd-all">-</span>
+              </li>
+              <li>任务完成数：
+                <span id="fd-over">-</span>
+              </li>
+              <li>任务完成率：
+                <span>
+                  <span id="fd-rate">-</span>%</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bd-diagram">
+            <h1 class="diagram-title">任务发布情况分布图</h1>
+            <div id="bd-diagram-pie" style="height: 100%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 bd-col-m">
+        <div class="bd-main-box">
+          <h1 class="mian-title">宝坻河湖管护系统</h1>
+          <div class="bd-main-map">
+            <ul class="data-list">
+              <li class="list-item clearfix">
+                <div class="title">
+                  <h1>宝坻区二级</h1>
+                  <h2>河道总体长度</h2>
+                </div>
+                <div class="data" id="bd-hc">-</div>
+              </li>
+              <li class="list-item clearfix">
+                <div class="title">
+                  <h1>宝坻区河湖</h1>
+                  <h2>管理人员数量</h2>
+                </div>
+                <div class="data" id="bd-all-user">-</div>
+              </li>
+            </ul>
+            <div class="user-list-box">
+              <h1 class="user-list-title">
+                <span>执行人员列表</span>
+              </h1>
+              <ul class="user-list" id="user-list"></ul>
+            </div>
+            <div class="map-box">
+              <div class="map-wrapper"></div>
+              <span class="r-name-item rname1" onclick="userNameList(8)">午河</span>
+              <span class="r-name-item rname2" onclick="userNameList(2)">鲍丘河</span>
+              <span class="r-name-item rname3" onclick="userNameList(3)">百里河</span>
+              <span class="r-name-item rname4" onclick="userNameList(4)">窝头河</span>
+              <span class="r-name-item rname5" onclick="userNameList(1)">箭杆河</span>
+              <span class="r-name-item rname6" onclick="userNameList(7)">导流河</span>
+              <span class="r-name-item rname7" onclick="userNameList(5)">绣针河</span>
+              <span class="r-name-item rname8" onclick="userNameList(2)">青龙湾故道</span>
+              <div class="" id="allMap"></div>
+            </div>
+          </div>
+          <div class="bd-main-footer">
+            <h1 class="main-footer-title" id="get-date"></h1>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 bd-col-2 bd-col-r">
+        <div class="bd-boxr">
+          <div class="border-box border-box-top"></div>
+          <div class="border-box border-box-bottom"></div>
+          <div class="bd-weather">
+            <h1 class="weather-title">
+              <span>未来天气情况</span>
+            </h1>
+            <ul class="weather-list" id="weather-list"></ul>
+          </div>
+          <div class="bd-video">
+            <h1 class="video-title">
+              <span>监控点视频信息</span>
+            </h1>
+            <div id="video" style="width: 346px; height: 217px;"></div>
+          </div>
+          <div class="bd-news">
+            <h1 class="news-title">
+              <span>新闻公告</span>
+            </h1>
+            <ul class="news-list" id="news-list"></ul>
+          </div>
+          <div class="bd-takes">
+            <ul class="takes-list">
+              <li class="list-item">
+                <h1>本日发送任务数</h1>
+                <h2 id="takes-num">-</h2>
+              </li>
+              <li class="list-item">
+                <h1>目前完成任务数</h1>
+                <h2 id="takes-over">-</h2>
+              </li>
+              <li class="list-item">
+                <h1>上月发送任务数</h1>
+                <h2 id="n-takes-num">-</h2>
+              </li>
+              <li class="list-item">
+                <h1>上月完成任务数</h1>
+                <h2 id="n-takes-over">-</h2>
+              </li>
+            </ul>
+          </div>
+          <div class="in-system">
+            <a href="##">进入系统</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade news-content-m" id="news-m52" onclick="startLoad()">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="startLoad()">&times;</button>
+            <h4 class="modal-title">-</h4>
+          </div>
+          <div class="modal-body">
+            -
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/jquery1.9.1/jquery.min.js"></script>
+  <script src="./js/jquerybase64/jquery.base64.js"></script>
+  <script src="./js/bootstrap3.x/bootstrap.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/statisticalHome/dataSource.js"></script>
+  <script src="./js/echarts/echarts.min.js"></script>
+  <script src="http://api.map.baidu.com/api?v=2.0&ak=sUdSmbsNs3SD23Gk4dYZXIusmRtYC3w7"></script>
+  <script src="./js/statisticalHome/shine.js"></script>
+  <script src="./js/statisticalHome/echart-pie.js"></script>
+  <script src="./js/statisticalHome/mapAll.js"></script>
+  <script src="./js/statisticalHome/index.js"></script>
+  <script src="./js/ckplayer/ckplayer.min.js"></script>
+  <script src="./js/statisticalHome/video.js"></script>
+
+</body>
+
+</html>
